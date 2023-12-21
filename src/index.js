@@ -1,17 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './shared/App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
+import { createStore } from "redux";
+import { composeWithDevTools } from 'redux-devtools-extension'; // 리덕스 개발자 도구
+import rootReducer from "./modules";
+
+const store = createStore(rootReducer, composeWithDevTools());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Provider store={store}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <App />
+    </BrowserRouter>
+  </Provider>
 );
 
-// If you want to start measuring performance in your app, pass a function
+// IfBrowserRoutereasuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
