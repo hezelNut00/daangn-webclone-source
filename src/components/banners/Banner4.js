@@ -1,29 +1,28 @@
 import styled from "styled-components";
 
-import banner2 from "../shared/banner2.png";
+import banner4 from "../../shared/banner4.png";
 
-const Banner2 = () => {
+const Banner4 = () => {
     return (
         <section className="rebranded-home-main-section" style={{backgroundColor: "#f9f9f9" }}>
             <HomeMainContent>
-                <div className="home-main-image-01">
-                    <Image2 />
+                <div className="home-main-image-03">
+                    <Image4 />
                 </div>
                 <div>
-                    <p className="service-title">중고거래</p>
+                    <p className="service-title">알바</p>
                     <h1 className="home-main-title">
-                        믿을만한
+                        걸어서 10분!
                         <br />
-                        이웃 간 중고거래
+                        동네 알바 구하기
                     </h1>
                     <p className="service-desc">
-                        동네 주민들과 가깝고 따뜻한 거래를
+                        당근하듯 쉽고, 편하게
                         <br />
-                        지금 경험해보세요.
+                        당근 알바로 동네 알바를 구할 수 있어요.
                     </p>
                     <div className="home-buttons">
-                        <a href="/daangnmarket" className="home-buttons-hot-articles">인기매물 보기</a>
-                        <a href="/daangnmarket" className="home-buttons-trust">믿을 수 있는 중고거래</a>
+                        <a href="/daangnmarket" className="home-buttons-jobs">내근처 알바 보기</a>
                     </div>
                 </div>
             </HomeMainContent>
@@ -31,7 +30,7 @@ const Banner2 = () => {
     );
 };
 
-export default Banner2;
+export default Banner4;
 
 const HomeMainContent = styled.div`
     display: flex;
@@ -91,8 +90,8 @@ const HomeMainContent = styled.div`
     }
 `
 
-const Image2 = styled.div`
-    background-image: url(${banner2});
+const Image4 = styled.div`
+    background-image: url(${banner4});
     background-size: 655px 750px;
     width: 655px;
     height: 750px;

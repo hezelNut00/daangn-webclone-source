@@ -1,36 +1,41 @@
 import styled from "styled-components";
 
-import banner5 from "../shared/banner5.webp";
+import banner2 from "../../shared/banner2.png";
 
-const Banner5 = () => {
+const Banner2 = () => {
     return (
-        <section className="rebranded-home-main-section" style={{backgroundColor: "#F6FDEC" }}>
+        <section className="rebranded-home-main-section" style={{backgroundColor: "#f9f9f9" }}>
             <HomeMainContent>
+                <div className="home-main-image-01">
+                    <Image2 />
+                </div>
                 <div>
-                    <p className="service-title">동네업체</p>
+                    <p className="service-title">중고거래</p>
                     <h1 className="home-main-title">
-                        내 근처에서 찾는
+                        믿을만한
                         <br />
-                        동네업체
+                        이웃 간 중고거래
                     </h1>
                     <p className="service-desc">
-                        이웃들의 추천 후기를 확인하고
+                        동네 주민들과 가깝고 따뜻한 거래를
                         <br />
-                        동네 곳곳의 업체들을 찾을 수 있어요.
+                        지금 경험해보세요.
                     </p>
                     <div className="home-buttons">
-                        <a href="/daangnmarket" className="home-buttons-town">당근 동네업체 보기</a>
+                        <a href="/daangnmarket/#/hot_articles" className="home-buttons-hot-articles" onClick={() => {
+                            window.scrollTo({
+                                    top: 0,
+                                });
+                        }}>인기매물 보기</a>
+                        <a href="/daangnmarket" className="home-buttons-trust">믿을 수 있는 중고거래</a>
                     </div>
-                </div>
-                <div className="home-main-image-01">
-                    <Image5 />
                 </div>
             </HomeMainContent>
         </section>
     );
 };
 
-export default Banner5;
+export default Banner2;
 
 const HomeMainContent = styled.div`
     display: flex;
@@ -90,8 +95,8 @@ const HomeMainContent = styled.div`
     }
 `
 
-const Image5 = styled.div`
-    background-image: url(${banner5});
+const Image2 = styled.div`
+    background-image: url(${banner2});
     background-size: 655px 750px;
     width: 655px;
     height: 750px;

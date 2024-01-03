@@ -4,19 +4,25 @@ import './index.css';
 import App from './shared/App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
-import { createStore } from "redux";
+import { HashRouter } from 'react-router-dom';
+import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from 'redux-devtools-extension'; // 리덕스 개발자 도구
-import rootReducer from "./modules";
+import rootReducer, { rootSaga } from "./modules";
+import createSagaMiddleware from "redux-saga";
 
-const store = createStore(rootReducer, composeWithDevTools());
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(
+    rootReducer,
+    composeWithDevTools(applyMiddleware(sagaMiddleware))
+);
+sagaMiddleware.run(rootSaga);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </Provider>
 );
 

@@ -1,0 +1,38 @@
+{
+    "data": {
+        "items": [
+            {
+                "id": 1,
+                "title": "매트",
+                "price": 10000,
+                "adress": "경기도 하남시",
+                "url": "/daangnmarket/fleamarket",
+                "urlToImage": "https://via.placeholder.com/223"
+            },
+            {
+                "id": 2,
+                "title": "침대",
+                "price": 20000,
+                "adress": "경기도 하남시",
+                "url": "/daangnmarket/fleamarket",
+                "urlToImage": "https://via.placeholder.com/223"
+            },
+            {
+                "id": 3,
+                "title": "치킨",
+                "price": 30000,
+                "adress": "경기도 하남시",
+                "url": "/daangnmarket/fleamarket",
+                "urlToImage": "https://via.placeholder.com/223"
+            },
+            {
+                "id": 4,
+                "title": "신발",
+                "price": 40000,
+                "adress": "경기도 하남시",
+                "url": "/daangnmarket/fleamarket",
+                "urlToImage": "https://via.placeholder.com/223"
+            }
+        ]
+    }
+}

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import banner3 from "../shared/banner3.png";
-import HomeIcon01 from "../components/icons/HomeIcon01";
-import HomeIcon02 from "./icons/HomeIcon02";
-import HomeIcon03 from "./icons/HomeIcon03";
+import banner3 from "../../shared/banner3.png";
+import HomeIcon01 from "../icons/HomeIcon01";
+import HomeIcon02 from "../icons/HomeIcon02";
+import HomeIcon03 from "../icons/HomeIcon03";
 
 const Banner3 = () => {
     return (

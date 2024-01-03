@@ -5,16 +5,23 @@ import { Link }  from "react-router-dom";
  * 회원가입, 로그인 폼
  */
 
-const AuthForm = ({type}) => {
+const AuthForm = ({type, form, onChange, onSubmit }) => {
     const text = textMap[type];
     return (
         <AuthFormWrap>
-            <form>
-                <StyledInput autoComplete="username" name="username" placeholder="아이디"/>
-                <StyledInput autoComplete="new-password" name="password" placeholder="비밀번호" type="password"/>
+            <form onSubmit={onSubmit}>
+                <StyledInput autoComplete="username" name="username" placeholder="아이디" onChange={onChange} value={form.username} />
+                <StyledInput autoComplete="new-password" name="password" placeholder="비밀번호" type="password" onChange={onChange} value={form.password} />
                 {
                     type === "register" && (
-                        <StyledInput autoComplete="new-password" name="passwordConfirm" placeholder="비밀번호 확인" type="password" />
+                        <>
+                            <StyledInput autoComplete="new-password" name="passwordConfirm" placeholder="비밀번호 확인" type="password" onChange={onChange} value={form.passwordConfirm} />
+                            
+                            <StyledInput placeholder="휴대전화번호"/>    
+                            <StyledInput placeholder="이메일"/>
+                            <StyledInput placeholder="닉네임"/>
+                            <StyledInput placeholder="주소"/>
+                        </>
                     )
                 }
             </form>

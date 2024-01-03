@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-import Banner1 from "../components/Banner1";
-import Banner2 from "../components/Banner2";
-import Banner3 from "../components/Banner3";
-import Banner4 from "../components/Banner4";
-import Banner5 from "../components/Banner5";
+import Banner1 from "../components/banners/Banner1";
+import Banner2 from "../components/banners/Banner2";
+import Banner3 from "../components/banners/Banner3";
+import Banner4 from "../components/banners/Banner4";
+import Banner5 from "../components/banners/Banner5";
 
 const MainPage = () => {
     return (

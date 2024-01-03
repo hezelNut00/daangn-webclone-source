@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-import banner1 from "../shared/banner1.png";
+import banner1 from "../../shared/banner1.png";
+
 
 const Banner1 = () => {
     return (
